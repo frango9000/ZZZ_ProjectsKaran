@@ -5,16 +5,26 @@
  */
 package P3_Fibonacci;
 
+import java.util.Scanner;
+
 /**
  *
  * @author NarF
  */
 public class P3_Fibonacci {
+
     public static void main(String[] args) {
-        boolean upToNFibs =true;
-        
-        System.out.println("");
-        
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int fiba = 1;
+        int fibb = 0;
+        int fib;
+        for (int i = 1; i <= n; i++) {
+            fib = fiba + fibb;
+
+            fibb = fiba;
+            fiba = fib;
+            System.out.println(i + ": " + fib);
+        }
     }
-            
 }
